@@ -1,6 +1,7 @@
 .searchbar-container {
   display: flex;
   justify-content: center;
+  margin-top: 4rem;
 }
 
 .searchbar {
@@ -17,7 +18,7 @@
 
 .icon-location {
   position: absolute;
-  left: 0.5rem;
+  left: -1.5rem;
   background: url("../../../../public/map.png") no-repeat center center;
   background-size: contain;
   border: none;
@@ -28,7 +29,7 @@
 
 .icon-favorite {
   position: absolute;
-  right: 0.5rem;
+  right: -1.5rem;
   background: url("../../../../public/star.png") no-repeat center center;
   background-size: contain;
   border: none;

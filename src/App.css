@@ -12,6 +12,7 @@ header {
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
+  margin: 1rem;
 }
 
 .add-favorite-button:hover {
