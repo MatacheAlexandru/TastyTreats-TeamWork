@@ -114,3 +114,13 @@
     transform: rotate(1turn);
   }
 }
+
+p {
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 2rem;
+  color: rgb(77, 249, 246);
+  text-shadow: 0.5rem 0.5rem 2rem rgb(77, 249, 246);
+}
