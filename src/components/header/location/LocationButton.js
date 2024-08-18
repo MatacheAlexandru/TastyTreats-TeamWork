@@ -1,4 +1,5 @@
 import React from "react";
+import "./LocationButton.css";
 import { fetchWeatherByCoords } from "../../api/openweather/fetchWeatherByCoords/fetchWeatherByCoords";
 
 function LocationButton({ setWeatherData, setError, setShowErrorModal }) {

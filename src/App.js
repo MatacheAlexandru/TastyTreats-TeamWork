@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBar from "./components/header/searchBarSections/SearchBar";
+import SearchBar from "./components/header/searchBarSections/searchBar/SearchBar";
 import WeatherCard from "./components/main/weathercard/weathercard"; // Importăm WeatherCard
 import "./App.css";
 

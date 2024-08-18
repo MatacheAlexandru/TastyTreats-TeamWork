@@ -9,15 +9,14 @@
 
 /* Stiluri globale pentru body */
 body {
-  background-color: #2d2e2ef0; /* Fundal deschis */
-  color: #333; /* Culoare text principal */
+  background-color: #76b6fff0;
+  color: #333;
   line-height: 1.6;
   font-size: 16px;
   padding: 0;
   margin: 0;
 }
 
-/* Stiluri pentru heading-uri */
 h1,
 h2,
 h3,
@@ -26,7 +25,7 @@ h5,
 h6 {
   margin-bottom: 1rem;
   font-weight: 600;
-  color: #222; /* Culoare heading-uri */
+  color: #222;
 }
 
 h1 {
@@ -41,15 +40,13 @@ h3 {
   font-size: 1.75rem;
 }
 
-/* Stiluri pentru paragrafe */
 p {
   margin-bottom: 1.5rem;
-  color: #555; /* Culoare pentru text */
+  color: #555;
 }
 
-/* Linkuri */
 a {
-  color: #007bff; /* Culoare linkuri */
+  color: #007bff;
   text-decoration: none;
   transition: color 0.3s ease;
 }

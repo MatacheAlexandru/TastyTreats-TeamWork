@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import { handleSearch } from "./SearchFetch";
+import "./SearchBar.css";
+import { handleSearch } from "../searchFetch/SearchFetch";
 import {
   handleAddFavorite,
   handleShowFavorites,
   handleCloseFavoritesModal,
   handleSelectFavorite,
-} from "../favorite/favoritesHandl/FavoritesHandl";
-import ModalFavorite from "../favorite/modalFavorite/ModalFavorite";
-import WeatherCard from "../../main/weathercard/weathercard";
-import LocationButton from "../location/LocationButton"; // Importă butonul de locație
+} from "../../favorite/favoritesHandl/FavoritesHandl";
+import ModalFavorite from "../../favorite/modalFavorite/ModalFavorite";
+import WeatherCard from "../../../main/weathercard/weathercard";
+import LocationButton from "../../location/LocationButton"; // Importă butonul de locație
 
 function SearchBar() {
   const [city, setCity] = useState("");

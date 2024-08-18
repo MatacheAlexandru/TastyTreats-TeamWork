@@ -1,4 +1,5 @@
 import React from "react";
+import "./FavoriteButton.css";
 
 function FavoriteButton({ onClick }) {
   return (

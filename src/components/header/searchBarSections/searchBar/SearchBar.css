@@ -1,57 +1,123 @@
 .searchbar-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: 4rem;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f0f4f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.searchbar {
+form {
   display: flex;
   align-items: center;
-  position: relative;
-}
-
-.searchbar input {
-  padding-left: 2rem;
-  padding-right: 2rem;
-  width: 200px;
-}
-
-.icon-location {
-  position: absolute;
-  left: -1.5rem;
-  background: url("../../../../public/map.png") no-repeat center center;
-  background-size: contain;
-  border: none;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-}
-
-.icon-favorite {
-  position: absolute;
-  right: -1.5rem;
-  background: url("../../../../public/star.png") no-repeat center center;
-  background-size: contain;
-  border: none;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-}
-
-.suggestions-list {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  gap: 10px;
   width: 100%;
-  border: 1px solid #ccc;
-  z-index: 10;
 }
 
-.suggestions-list li {
-  padding: 0.5rem;
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #3498db;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.add-favorite-button {
+  margin-top: 10px;
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-favorite-button:hover {
+  background-color: #27ae60;
+}
+
+.error-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.modal-content p {
+  color: #e74c3c;
+  font-size: 1rem;
+}
+
+.modal-content button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #c0392b;
+}
+
+button[type="button"] {
+  margin-top: 20px;
+  background-color: #f39c12;
+}
+
+button[type="button"]:hover {
+  background-color: #e67e22;
+}
+
+@media (max-width: 480px) {
+  .searchbar-container {
+    padding: 15px;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input[type="text"],
+  button {
+    width: 100%;
+  }
 }

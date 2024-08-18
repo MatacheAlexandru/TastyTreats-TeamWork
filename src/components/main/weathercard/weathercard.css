@@ -1,4 +1,4 @@
-.weather-card {
+/* .weather-card {
   position: relative;
   width: 25rem;
   border-radius: 1rem;
@@ -28,7 +28,7 @@
   font-weight: 700;
   font-style: normal;
   color: rgba(240, 228, 175, 0.833);
-  position: relative; /* Necesită pentru a folosi pseudo-elemente */
+  position: relative; 
   padding: 0.8rem;
   font-size: 4rem;
   text-shadow: 0.5rem 0.5rem 2rem rgba(240, 228, 175, 0.833);
@@ -40,14 +40,14 @@
   top: 0;
   bottom: 0;
   left: 0;
-  width: 0.1rem; /* Lățimea border-ului */
+  width: 0.1rem; 
   background: linear-gradient(
     to bottom,
     rgba(240, 228, 175, 0) 0%,
     rgba(240, 228, 175, 1) 50%,
     rgba(240, 228, 175, 0) 100%
   );
-  /* Gradient care estompează la capete */
+ 
 }
 
 .weather-icon {
@@ -58,10 +58,10 @@
 .weather-icon img {
   background-color: rgba(255, 255, 255, 0.566);
   box-shadow: 0 0 3rem rgb(255, 255, 255), 0 8px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 50%; /* Colțuri rotunjite pentru un efect mai estetic */
+  border-radius: 50%; 
 }
 
-/* Pseudo-element pentru efectul de border rotativ */
+
 .weather-card::before {
   content: "";
   position: absolute;
@@ -82,10 +82,10 @@
     linear-gradient(transparent, rgba(168, 239, 255, 1), transparent 30%),
     linear-gradient(transparent, rgba(168, 239, 255, 1), transparent 30%);
   animation: rotate 4s linear infinite;
-  border-radius: 10px; /* Se potrivește cu forma cardului */
+  border-radius: 10px; 
 }
 
-/* Pseudo-element pentru efectul de opacitate în interiorul cardului */
+
 .weather-card::after {
   content: "";
   position: absolute;
@@ -99,16 +99,16 @@
   animation: opacityChange 3s infinite alternate;
 }
 
-/* @keyframes opacityChange {
+@keyframes opacityChange {
   50% {
     opacity: 1;
   }
   100% {
     opacity: 0.5;
   }
-} */
+}
 
-/* Animația de rotație a gradientului */
+
 @keyframes rotate {
   100% {
     transform: rotate(1turn);
@@ -123,4 +123,104 @@ p {
   font-size: 2rem;
   color: rgb(77, 249, 246);
   text-shadow: 0.5rem 0.5rem 2rem rgb(77, 249, 246);
+} */
+.weather-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 350px; /* Lățimea maximă pentru card */
+  width: 100%; /* Asigură-te că este fluid */
+  margin: 20px;
+}
+
+.weather-header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.city-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.current-temperature {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3498db; /* O culoare plăcută pentru temperatura curentă */
+  margin: 0;
+}
+
+.weather-icon {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.weather-icon img {
+  max-width: 100px;
+  height: auto;
+}
+
+.weather-description {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.temp-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.label {
+  font-weight: bold;
+  color: #444;
+}
+
+.value {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.additional-info {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.time-stats {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Media query pentru ecrane mici (telefoane) */
+@media (max-width: 480px) {
+  .weather-card {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .current-temperature {
+    font-size: 2rem;
+  }
+
+  .city-name {
+    font-size: 1.3rem;
+  }
+
+  .weather-icon img {
+    max-width: 80px;
+  }
+
+  .value {
+    font-size: 1rem;
+  }
 }

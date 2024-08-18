@@ -1,4 +1,4 @@
-import { fetchWeather } from "../../api/openweather/fetchWeather/fetchWeather";
+import { fetchWeather } from "../../../api/openweather/fetchWeather/fetchWeather";
 
 export const handleSearch = async (
   city,

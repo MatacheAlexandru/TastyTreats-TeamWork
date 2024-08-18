@@ -1,4 +1,5 @@
 import React from "react";
+import "./SearchInput.css";
 
 function SearchInput({ city, setCity, handleSearch }) {
   const handleSubmit = (e) => {

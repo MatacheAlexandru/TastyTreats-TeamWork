@@ -1,0 +1,56 @@
+.error-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.modal-content p {
+  color: #e74c3c;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #2980b9;
+}
+
+.modal-content button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 480px) {
+  .error-modal {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .modal-content p {
+    font-size: 1rem;
+  }
+
+  .modal-content button {
+    width: 100%;
+  }
+}
