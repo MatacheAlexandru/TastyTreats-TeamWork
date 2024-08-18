@@ -2,25 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./weathercard.css";
 
 function WeatherCard({ weather }) {
-  const {
-    cityName,
-    currentTemp,
-    minTemp,
-    maxTemp,
-    weatherDescription,
-    weatherIcon,
-    humidity,
-    windSpeed,
-    pressure,
-    timezoneOffset,
-  } = weather;
-
+  // Hook-urile sunt apelate întotdeauna
   const [currentTime, setCurrentTime] = useState(new Date());
 
-  // Funcția pentru a actualiza ora în funcție de timezone-ul local
   useEffect(() => {
+    if (!weather) return; // Dacă nu avem date meteo, ieșim din efect
     const updateTime = () => {
-      // Obținem ora UTC fără ajustări locale
       const nowUTC = new Date();
       const utcTime = new Date(
         nowUTC.getUTCFullYear(),
@@ -31,19 +18,19 @@ function WeatherCard({ weather }) {
         nowUTC.getUTCSeconds()
       );
 
-      // Adăugăm diferența de fus orar pentru orașul respectiv
-      const localTime = new Date(utcTime.getTime() + timezoneOffset * 1000);
-
-      // Actualizăm timpul local
+      const localTime = new Date(
+        utcTime.getTime() + weather.timezoneOffset * 1000
+      );
       setCurrentTime(localTime);
     };
 
-    // Actualizează ora la fiecare secundă
     const intervalId = setInterval(updateTime, 1000);
 
-    // Cleanup interval la demontarea componentei
     return () => clearInterval(intervalId);
-  }, [timezoneOffset]);
+  }, [weather]);
+
+  // Condiția pentru afișare
+  if (!weather) return null;
 
   const formatTime = (time) => {
     return time.toLocaleTimeString("en-GB", {
@@ -61,6 +48,18 @@ function WeatherCard({ weather }) {
       day: "numeric",
     });
   };
+
+  const {
+    cityName,
+    currentTemp,
+    minTemp,
+    maxTemp,
+    weatherDescription,
+    weatherIcon,
+    humidity,
+    windSpeed,
+    pressure,
+  } = weather;
 
   return (
     <div className="weather-card">
